@@ -5,9 +5,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        int[] T = new int[12];
+        int[] T = new int[8];
         Scanner scanner = new Scanner(System.in);
-        // Given T = [2, −3, 3, 1, 10, 8, 2, 5, 13, −5, 3, −18]:
+        // Given T = [−3, −14, −5, 7, 8, 42, 8, 3]
         for (int i = 0; i < T.length; i++){
            T[i] = scanner.nextInt();
         }
@@ -18,9 +18,9 @@ public class Main {
     public static String solution(int[] T) {
         String str = "";
         int N = T.length/4;
-        int[] Winter = Arrays.copyOfRange(T, 0, N-1);
-        int[] Spring = Arrays.copyOfRange(T, N, N*2-1);
-        int[] Summer = Arrays.copyOfRange(T, N*2, N*3-1);
+        int[] Winter = Arrays.copyOfRange(T, 0, N);
+        int[] Spring = Arrays.copyOfRange(T, N, N*2);
+        int[] Summer = Arrays.copyOfRange(T, N*2, N*3);
         int[] Autumn = Arrays.copyOfRange(T, N*3, T.length);
 
         int WinterAmplitude = getAmplitude(Winter);
